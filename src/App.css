@@ -1,0 +1,12 @@
+.container {
+  margin-top: 50px;
+  /* margin-left: 20px; */
+}
+
+.card {
+  background-image: url("./assets/thumbnail-background.svg");
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 300px;
+}
