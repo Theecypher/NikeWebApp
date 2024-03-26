@@ -1,7 +1,7 @@
 import Featured from "./Featured/Featured";
 import Hero from "./Hero/hero";
 import Navbar from "./Navbar";
-import Spotlight from "./Products/spotlight";
+import Spotlight from "./Spotlight/spotlight";
 import Trending from "./Trending/Trending";
 
 const LandingPage = () => {

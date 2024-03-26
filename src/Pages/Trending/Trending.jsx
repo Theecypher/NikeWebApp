@@ -4,9 +4,9 @@ import TrendingData from "./TrendingData";
 const Trending = () => {
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    console.log(sectionRef.current.offsetLeftn);
-  }, [])
+  // useEffect(() => {
+  //   console.log(sectionRef.current.offsetLeftn);
+  // }, [])
 
   return (
     <section className="container ml-[20px]" ref={sectionRef}>
