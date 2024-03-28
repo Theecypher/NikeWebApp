@@ -1,48 +1,37 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import spotlightData from "./spotlightData";
+import img1 from "./assets/nike-blazer.jpg"
+import img2 from "./assets/nike-dunk.jpg"
+import img3 from "./assets/nike-jordan.jpg"
+import img4 from "./assets/nike1.jpg"
+import img5 from "./assets/nike2.jpg"
 
 const Spotlight = () => {
     const spotRef = useRef(null);
-    const imageRef = useRef(null);
-    const [toggle, setToggle] = useState(false)
-    const [isDown, setIsDown] = useState(false)
-    const [startX, setStartX] = useState(null)
-    const [scrollLeft, setScrollLeft] = useState(0)
+    const imagesRef = useRef(null);
+    const [maxScrollLeft, setMaxScrollLeft] = useState(false)
 
-    const tabsH = spotRef.current;
-    
-    const handleMouseDown = (e) => {
-      setIsDown(true)
-      setToggle((prev) => !prev)
-      setStartX(e.pageX - tabsH.offsetLeft)
-      setScrollLeft(tabsH.scrollLeft)
-    }
+    useEffect(() => {
+      const imageList = imagesRef.current;
 
-    const handleMouseLeave = (e) => {
-      setIsDown(false)
-      setToggle(false)
-      console.count(true);
-    }
+      // if (!imageList) return;
 
-    const handleMouseMove = (e) => {
-      if (!isDown) return;
-      e.preventDefault()
-      const x = e.pageX - tabsH.offsetLeft
-      const walk = (x - startX) * 3
-      tabsH.scrollLeft = scrollLeft - walk
-    }
+      console.log(imageList);
+    }, [])
+  
 
   return (
     <section className="container ml-[20px]" ref={spotRef}>
     <h3 className="font-bold text-[18px]">Classics Spotlight</h3>
-    <div
-    onMouseLeave={handleMouseLeave}
-    onMouseMove={handleMouseMove}
-    onMouseDown={handleMouseDown}
-     className="flex gap-4">
-      {spotlightData.map((item, key) => (
-        <img key={key} ref={imageRef} src={item.img} className="w-[300px] h-[300px] object-contain" alt="" />
-      ))}
+    <div className="flex gap-4 ref={imagesRef}">
+      {/* {spotlightData.map((item, key) => (
+        <img key={key} src={item.img} className="w-[300px] h-[300px] object-contain" alt="" />
+      ))} */}
+      <img src={img1} />
+      <img src={img2} />
+      <img src={img3} />
+      <img src={img4} />
+      <img src={img5} />
     </div>
   </section>
   );
