@@ -11,11 +11,11 @@ import LandingPage from "./Pages/landingPage";
 function App() {
   return (
     <div className="">
-      <Signup />
-      {/* <Routes>
+      {/* <Signup /> */}
+      <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/signup" element={<Signup />} />
-      </Routes> */}
+      </Routes>
     </div>
   );
 }
