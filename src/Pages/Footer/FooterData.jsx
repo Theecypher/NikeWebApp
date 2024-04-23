@@ -14,9 +14,10 @@ const Resources = [
       },
 ]
 
-const Content = [
+export const Content = [
     {
       name: "Help",
+      id: 0,
       links: [
         { name: "Get Help", link: "/" },
         { name: "Order  Status", link: "/" },
@@ -28,8 +29,10 @@ const Content = [
         { name: "Contact Us", link: "/" },
       ],
     },
+    
     {
       name: "COMPANY",
+      id: 1,
       links: [
         { name: "About Nike", link: "" },
         { name: "News", link: "" },
@@ -41,6 +44,7 @@ const Content = [
     },
     {
       name: "PROMOTIONS AND DISCOUNTS",
+      id: 2,
       links: [
         { name: "Student", link: "" },
         { name: "Military", link: "" },
@@ -60,5 +64,5 @@ const Content = [
     // },
   ];
   
-  export default { Content, Resources };
+  // export default { Content, Resources };
   

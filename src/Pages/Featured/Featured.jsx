@@ -3,13 +3,13 @@ import FeaturedData from "./FeaturedData";
 
 const Featured = () => {
   return (
-    <section className="container ">
-      <h3 className="font-bold ml-[32px] my-5 text-[18px]">Featured</h3>
-      <div className=" flex flex-col gap-2 justify-self-start justify-center items-center">
+    <section className="">
+      <h3 className="font-bold m-5 text-[18px]">Featured</h3>
+      <div className="flex flex-col px-5 center gap-2 justify-center">
         {FeaturedData.map((item, index) => (
-          <div className="card mx-5 flex flex-col justify-center px-4" key={index}>
-            <img className="w-[220px]" src={item.img} alt="" />
-            <h4 className="text-white w-[170px] my-6">{item.details}</h4>
+          <div className="card border w-full border-orange-500 flex flex-col justify-center px-4" key={index}>
+            <img className="w-[150px]" src={item.img} alt="" />
+            <h4 className="text-white my-6">{item.details}</h4>
             <Button text="shop" />
           </div>
         ))}

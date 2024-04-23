@@ -1,8 +1,9 @@
-import "./Trending.css";
-import { useEffect, useRef, useState } from "react";
-import TrendingData from "./TrendingData";
 
-const ClickandScroll = () => {
+import "../Trending/Trending.css";
+import { useEffect, useRef, useState } from "react";
+import SportData from "./sportData";
+
+const ShopbySport = () => {
   const divRef = useRef(null);
   const [toggle, setToggle] = useState(false);
   const [isDown, setIsDown] = useState(false);
@@ -10,6 +11,7 @@ const ClickandScroll = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
 
   const active = "bg-black grabbing cursor-grabbing scale";
+
 
   const tabsH = divRef.current;
 
@@ -39,30 +41,30 @@ const ClickandScroll = () => {
   };
 
   return (
-    <section className="container ml-2">
-      <h3 className="font-bold text-[18px]">Trending</h3>
+    <section className="container ml-3">
+      <h3 className="font-bold text-[18px]">Shop by Sport</h3>
       <div className="slider">
         <div
           className={
             toggle
-              ? "flex gap-2 w-full overflow-y-hidden webkit pers select-none relative will-change-transform cursor-pointer transition-all duration-[0.2s] scale-95"
-              : "flex gap-2 active w-full overflow-y-hidden webkit pers select-none relati will-change-transform cursor-pointer transition-all duration-[0.2s] scale-100"
+              ? "flex gap-4 w-full overflow-y-hidden webkit pers select-none relative will-change-transform cursor-pointer transition-all duration-[0.2s] scale-95"
+              : "flex gap-4 active w-full overflow-y-hidden webkit pers select-none relati will-change-transform cursor-pointer transition-all duration-[0.2s] scale-100"
           }
         >
-          {TrendingData.map((item, key) => (
+          {SportData.map((item, key) => (
             <div className="my-6" key={key}>
-              <img className="w-[280px] mb-5" src={item.img} alt="" />
-              <p className="text-[#b1b0b0]">{item.title}</p>
-              <h4 className="font-[600] text-base leading-5 w-[220px]">
-                {item.desc}
+              <img className="w-[300px] h-[260px] mb-5" src={item.img} alt="" />
+              <h3 className="text-[#b7b6b6] my-1">{item.title}</h3>
+              <h4 className="text-base leading-5 w-[220px]">
+                {item.description}
               </h4>
             </div>
           ))}
-          {/* <div className="w-[200px] item h-[calc(100%-40px)] inline-flex items-center justify-center text-[80px] font-[100] bg-blue-500 text-white shadow-xl"></div> */}
+
         </div>
       </div>
     </section>
   );
 };
 
-export default ClickandScroll;
+export default ShopbySport;

@@ -17,10 +17,6 @@ const spotlightData = [
         title : "Nike Jordan"
     },
     {
-        img: nike2,
-        title : "Nike Jordan"
-    },
-    {
         img: nike3,
         title : "Nike Jordan"
     },

@@ -1,63 +1,65 @@
+import "./Trending.css";
 import { useEffect, useRef, useState } from "react";
 import TrendingData from "./TrendingData";
-import "./Trending.css"
 
 const Trending = () => {
-  const sectionRef = useRef(null);
+  const divRef = useRef(null);
   const [toggle, setToggle] = useState(false);
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(null);
   const [scrollLeft, setScrollLeft] = useState(0);
 
-  const tabsH = sectionRef.current;
+  const active = "bg-black grabbing cursor-grabbing scale";
+
+  const tabsH = divRef.current;
+
+  // const handleMouseMove = (e) => {
+  //   setTimeout(() => {}, 100);
+  // };
 
   const handleMouseDown = (e) => {
     setIsDown(true);
     setToggle((prev) => !prev);
-    setStartX(e.pageX - sectionRef.current.offsetLeft);
-    setScrollLeft(sectionRef.current.scrollLeft);
-    console.log({ startX, scrollLeft });
+    setStartX(e.pageX - tabsH.offsetLeft);
+    setScrollLeft(tabsH.scrollLeft);
+    // console.log({ startX, scrollLeft });
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = (e) => {
     setIsDown(false);
     setToggle(false);
   };
 
   const handleMouseMove = (e) => {
-    if (isDown) return;
+    if (!isDown) return;
     e.preventDefault();
-    const x = e.pageX - sectionRef.current.offsetLeft
-    const walk = (x - startX) * 2;
-    sectionRef.current = scrollLeft - walk;
+    const x = e.pageX - tabsH.offsetLeft;
+    const walk = (x - startX) * 3;
+    tabsH.scrollLeft = scrollLeft - walk;
   };
 
-
   return (
-    <section className="container ml-[20px]">
+    <section className="container ml-3">
       <h3 className="font-bold text-[18px]">Trending</h3>
-      <div
-        // className="flex gap-3 white-nowrap overflow-x-scroll pers w-full select-none relative"
-        className
-        ={
-          toggle
-            ? "flex gap-3 border-white webkit pers select-none will-change-transform cursor-pointer transition-all duration-[0.2s]"
-            : "flex gap-3 active border-white webkit pers select-none relative will-change-transform cursor-pointer transition-all duration-[0.2s]"
-        }
-        ref={sectionRef}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      >
-        {TrendingData.map((item, key) => (
-          <div className="my-6" key={key}>
-            <img className="w-[280px] mb-5" src={item.img} alt="" />
-            <p className="text-[#b1b0b0]">{item.title}</p>
-            <h4 className="font-[600] text-base leading-5 w-[220px]">
-              {item.desc}
-            </h4>
-          </div>
-        ))}
+      <div className="slider">
+        <div
+          className={
+            toggle
+              ? "flex gap-2 w-full overflow-y-hidden webkit pers select-none relative will-change-transform cursor-pointer transition-all duration-[0.2s] scale-95"
+              : "flex gap-2 active w-full overflow-y-hidden webkit pers select-none relati will-change-transform cursor-pointer transition-all duration-[0.2s] scale-100"
+          }
+        >
+          {TrendingData.map((item, key) => (
+            <div className="my-6" key={key}>
+              <img className="w-[280px] mb-5" src={item.img} alt="" />
+              <p className="text-[#b1b0b0]">{item.title}</p>
+              <h4 className="font-[600] text-base leading-5 w-[220px]">
+                {item.desc}
+              </h4>
+            </div>
+          ))}
+
+        </div>
       </div>
     </section>
   );

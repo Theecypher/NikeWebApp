@@ -14,7 +14,7 @@ const Sports = () => {
                 alt=""
               />
               <h3 className="text-[#b7b6b6] my-1">{item.title}</h3>
-              <p className="text-[18px]">{item.description}</p>
+              <p className="">{item.description}</p>
             </div >
           ))}
         </div>
