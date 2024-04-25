@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Content } from './FooterData';
+import { FaPlus } from 'react-icons/fa';
 
 const Accordion = () => {
   const [isActive, setIsActive] = useState(false);
@@ -12,7 +13,10 @@ const Accordion = () => {
       </div> */}
       {/* {isActive && <div className="flex">{content}</div>} */}
       {Content.map((item, index) => (
+        <div className='py-7 flex justify-between'>
         <h1>{item.name}</h1>
+        <FaPlus className='' />
+        </div>
       ))}
     </div>
   );

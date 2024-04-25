@@ -8,7 +8,7 @@ import sideBarData from "../Data/sidebarData"
 
 const Sidebar = ({setOpenSide, openSide }) => {
   return (
-    <aside className={openSide ?  "absolute top-0 right-0 ease-in-out duration-500 pt-2 w-[95%] md:hidden bg-gray-200" :
+    <aside className={openSide ?  "fixed z-50 top-0 right-0 ease-in-out duration-500 pt-2 md:hidden bg-gray-200" :
     "absolute top-0 right-[-300px] ease-in duration-500 pt-2 w-[95%] md:hidden bg-gray-200"
   }
    >
