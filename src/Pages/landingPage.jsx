@@ -17,7 +17,7 @@ const LandingPage = () => {
       <Featured />
       <SpotLight />
       <ShopbySport />
-      {/* <Membership /> */}
+      <Membership />
       <Footer />
     </div>
   );
