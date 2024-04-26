@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="flex gap-[14px]">
           <IoMdSearch className="text-[20px]" />
           <AiOutlineShopping className="text-[20px]" />
-          <Link to="">
+          <Link to="/signup">
             <RxPerson className="text-[20px]" />
           </Link>
           <RxHamburgerMenu
