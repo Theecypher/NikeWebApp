@@ -7,6 +7,7 @@ import Navbar from "./Pages/Navbar";
 import Sidebar from "./Components/sidebar";
 import Hero from "./Pages/Hero/hero";
 import LandingPage from "./Pages/landingPage";
+import UserAuth from "./Onboarding/userAuth";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       {/* <Signup /> */}
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/signup" element={<UserAuth />} />
       </Routes>
     </div>
   );

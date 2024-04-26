@@ -4,6 +4,7 @@ const NavbarData = [
     "Women",
     "Kids",
     "Accessories",
+    "sales"
 ]
 
 export default NavbarData
