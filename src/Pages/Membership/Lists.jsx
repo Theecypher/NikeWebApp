@@ -3,7 +3,7 @@ import ListData from "./ListData";
 
 const Lists = () => {
     return ( 
-        <div className="flex mt-[120px] flex-col gap-4">
+        <div className="flex mt-[120px] mb-10 flex-col gap-4">
            {ListData.map((item, index) => (
             <ul className="" key={index}>
                 <li className="font-[600]">

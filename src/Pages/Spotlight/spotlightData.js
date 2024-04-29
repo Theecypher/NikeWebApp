@@ -14,20 +14,28 @@ const spotlightData = [
     },
     {
         img: nike1,
-        title : "Nike Jordan"
+        title : "Nike force 1"
     },
     {
         img: nike3,
-        title : "Nike Jordan"
+        title : "Air Max"
     },
     {
         img: nike5,
-        title : "Nike Jordan"
+        title : "Blazer"
     },
     {
         img: nike6,
         title : "Nike Jordan"
     },
+]
+
+export const TrendingShoes = [
+{name:  "Nike Jordan"},
+{name:  "Nike force 1"},
+{name:  "Nike Dunk"},
+{name:  "Blazer"},
+{name:  "AirMax"},
 ]
 
 export default spotlightData;

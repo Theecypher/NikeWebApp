@@ -5,30 +5,39 @@ import { AiOutlineShopping } from "react-icons/ai";
 import Sidebar from "../Components/sidebar";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Carts from "../Components/Carts/Carts";
 
 const Navbar = () => {
   const [openSide, setOpenSide] = useState(false);
+  const [show, showButton] = useState(true);
 
-  // const handleClick = () =>
   return (
     <div>
       <div className="flex items-center gap-5 justify-between px-5">
         <SiNike className="text-[60px]" />
 
         <div className="flex gap-[14px]">
-          <IoMdSearch className="text-[20px]" />
-          <AiOutlineShopping className="text-[20px]" />
+          {show && (
+            <Link to="/search">
+              <IoMdSearch className="text-[22px]" />
+            </Link>
+          )}
+          <Link to="/carts">
+            <AiOutlineShopping className="text-[22px]" />
+          </Link>
           <Link to="/signup">
-            <RxPerson className="text-[20px]" />
+            <RxPerson className="text-[22px]" />
           </Link>
           <RxHamburgerMenu
-            className="text-[20px]"
+            className="text-[22px]"
             onClick={() => setOpenSide(true)}
           />
           {openSide && (
             <Sidebar setOpenSide={setOpenSide} openSide={openSide} />
           )}
         </div>
+
+        {!show && <Carts />}
       </div>
     </div>
   );

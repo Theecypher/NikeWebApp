@@ -8,26 +8,28 @@ import {
   AiFillTwitterCircle,
 } from "react-icons/ai";
 import { FaInstagramSquare } from "react-icons/fa";
-import { FaFacebook, FaInstagram, FaSquareYoutube, FaYoutube } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaSquareYoutube,
+  FaYoutube,
+} from "react-icons/fa6";
 
 export const Resources = [
   {
-    name: "RESOURCES"
+    name: "RESOURCES",
   },
   {
     name: "GIFT CARDS",
   },
   {
     name: "FIND A STORE",
-   
   },
   {
     name: "BECOME A MEMBER",
-   
   },
   {
     name: "NIKE X NBA",
-
   },
   {
     name: "Nike JOURNAL Racer",
@@ -88,10 +90,24 @@ export const Content = [
 ];
 
 export const Socials = [
-  {link: <FaInstagramSquare className="w-9 text-[#6f6e6e] rounded-full h-9" />},
-  {link: <FaSquareYoutube className="rounded-full h-9 w-9 text-[#6f6e6e]" />},
-  {link: <AiFillTwitterCircle className="w-9 text-[#6f6e6e] rounded-full h-9" />},
-  {link: <FaFacebook className="w-9 text-[#6f6e6e] rounded-full h-9" />}
-]
+  {
+    link: <FaInstagramSquare className="w-9 text-[#6f6e6e] rounded-full h-9" />,
+  },
+  { link: <FaSquareYoutube className="rounded-full h-9 w-9 text-[#6f6e6e]" /> },
+  {
+    link: (
+      <AiFillTwitterCircle className="w-9 text-[#6f6e6e] rounded-full h-9" />
+    ),
+  },
+  { link: <FaFacebook className="w-9 text-[#6f6e6e] rounded-full h-9" /> },
+];
 
-// export default { Content, Resources };
+export const footerBottom = [
+  {name: "Guides"},
+  {name: "Terms of Sale"},
+  {name: "Terms of Use"},
+  {name: "Nike Privacy Policy"},
+  {name: "Your Privacy Choices"},
+  {name: "CA Supply Chains Act"},
+  {name: "Terms of Sale"},
+];
