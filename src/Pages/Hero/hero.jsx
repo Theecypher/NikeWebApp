@@ -12,7 +12,7 @@ const Hero = () => {
         </header>
 
         <section className="mx-4 mt-2">
-          <div className="bg-black px-7 pt-7">
+          <div className="bg-black border h-full border-red-600 px-7 pt-7">
             <img className="rotate-[90deg] w-[300px]" src={shoes} alt="" />
 
             <div className="my-8 pb-4 mx-auto flex flex-col items-center">
