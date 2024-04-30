@@ -1,0 +1,15 @@
+/* .wall {
+    
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+} */
+
+.card {
+    background-image: url(./Assets/wall.jpeg);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 700px; */
+  }

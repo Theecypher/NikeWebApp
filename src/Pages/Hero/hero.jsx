@@ -12,10 +12,10 @@ const Hero = () => {
           <h3>Spring sale: Up to 50% Off</h3>
         </header>
 
-        <section className="mx-4 mt-2">
+        <section className=" mt-2">
           {/* <div className="bg-black border h-full px-7 pt-[200px]"> */}
             {/* <img className="rotate-[90deg] w-[300px]" src={shoes1} alt="" /> */}
-            <img className="" src={shoes1} alt="" />
+            <img className="w-full" src={shoes1} alt="" />
 
             {/* <div className="my-8 pb-4 mx-auto flex flex-col items-center">
               <SiNike className="text-white text-[50px] py-2" />
@@ -35,17 +35,17 @@ const Hero = () => {
             </div> */}
           {/* </div> */}
 
-          <div>
-            <h2 className="font-bold">Nike Air Mx Dn</h2>
-            <h1 className="text-5xl font-bold my-[2px]">FEEL THE UNREAL</h1>
-            <p className="text-[17px] font-[500] my-7">
+          <div className="mx-2 my-4">
+            {/* <h2 className="font-bold text-center">Nike Air Mx Dn</h2> */}
+            <h1 className="text-5xl font-bold my-[2px] text-center">MOM GOES THE DISTANCE</h1>
+            <p className="text-[17px] font-[400] my-7 text-center">
               The next generation of Air technology launches on March 12th.
               Preview the full lineup of colorways now.
             </p>
 
-            <div className="flex gap-2">
-                <Button text="Get Notified" blackButton="true" />
-                <Button text="Find Your Max" blackButton="true" />
+            <div className="flex justify-center gap-2">
+                <Button text="Shop" blackButton="true" />
+  
             </div>
           </div>
         </section>
