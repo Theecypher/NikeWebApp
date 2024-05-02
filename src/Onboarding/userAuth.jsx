@@ -4,7 +4,7 @@ import Button from "../Components/Button";
 
 const UserAuth = () => {
   return (
-    <div className="px-7 flex flex-col gap-3">
+    <div className="px-7 flex flex-col gap-4">
       <div className="flex gap-3 py-5">
         <SiNike className="font-[600] w-10 h-10" />
         <SiJordan className="font-[600] w-10 h-10" />

@@ -5,13 +5,12 @@ import SearchIcon from "./SearchIcon";
 const Search = () => {
   return (
     <div>
-      <div className="flex py-[5px] justify-center items-center gap-4">
+      <div className="flex px-3 py-[5px] justify-center items-center gap-1">
         <SearchIcon />
 
         <Link className="font-[600]" to="/">
           Cancel
         </Link>
-        {/* <h4 >Cancel</h4> */}
       </div>
 
       <div className="py-8 px-3">

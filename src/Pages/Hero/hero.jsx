@@ -8,11 +8,11 @@ const Hero = () => {
   return (
     <div>
       <div className="">
-        <header className="bg-gray-200 text-center">
-          <h3>Spring sale: Up to 50% Off</h3>
+        <header className="bg-gray-200 font-[400] text-center">
+          <h3>Mother's Day: Extra 25% Off</h3>
         </header>
 
-        <section className=" mt-2">
+        <section className="mt-2">
           {/* <div className="bg-black border h-full px-7 pt-[200px]"> */}
             {/* <img className="rotate-[90deg] w-[300px]" src={shoes1} alt="" /> */}
             <img className="w-full" src={shoes1} alt="" />
@@ -35,7 +35,7 @@ const Hero = () => {
             </div> */}
           {/* </div> */}
 
-          <div className="mx-2 my-4">
+          <div className="mx-2 my-2">
             {/* <h2 className="font-bold text-center">Nike Air Mx Dn</h2> */}
             <h1 className="text-5xl font-bold my-[2px] text-center">MOM GOES THE DISTANCE</h1>
             <p className="text-[17px] font-[400] my-7 text-center">
