@@ -13,7 +13,7 @@ import Carts from "./Components/Carts/Carts";
 
 function App() {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       {/* <Signup /> */}
       <Routes>
         <Route path="/" element={<LandingPage />} />
