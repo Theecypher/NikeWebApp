@@ -12,7 +12,7 @@ import Joinus from "../../Onboarding/Joinus";
 import { useState } from "react";
 
 const CartContent = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
 
   return (

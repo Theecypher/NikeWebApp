@@ -16,7 +16,7 @@ const MightLike = () => {
       <div className="flex border gap-3">
         {MightLikeData.map((item, i) => (
           // <div className="" key={i}>
-          <img key={i} className="border shadow-xl w-[200px] border-red-00" src={item.img} alt="" />
+          <img key={i} className="border shadow-xl w-[250px] border-red-00" src={item.img} alt="" />
           // </div>
         ))}
       </div>
