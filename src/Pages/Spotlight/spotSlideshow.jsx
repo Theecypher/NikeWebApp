@@ -48,7 +48,7 @@ const SpotLight = () => {
           }
         >
           {spotlightData.map((item, key) => (
-            <img className="w-[350px] h-[300px] mb-5" src={item.img} alt="" />
+            <img key={key} className="w-[350px] h-[300px] mb-5" src={item.img} alt="" />
           ))}
         </div>
       </div>

@@ -1,6 +1,7 @@
 import {
   FaArrowDown,
   FaChevronDown,
+  FaChevronUp,
   FaMinus,
   FaQuestionCircle,
 } from "react-icons/fa";
@@ -8,11 +9,14 @@ import { Link } from "react-router-dom";
 import Button from "../Button";
 import { RxMinus } from "react-icons/rx";
 import Joinus from "../../Onboarding/Joinus";
+import { useState } from "react";
 
 const CartContent = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+
   return (
-    // <div className="mx-[20px] text-center">
-    <div className="flex flex-col justify-cente my-5 gap-[2px] px-4 items-cent">
+    <div className="flex flex-col justify-cente my-5 gap-[2px] px-5 items-cent">
       <div className="mb-3">
         <h3 className="text-center font-semibold">Bag</h3>
         <div className="flex justify-center items-center gap-1">
@@ -22,12 +26,12 @@ const CartContent = () => {
         </div>
       </div>
 
-      <div className="border my-5">
-        <h2 className="text-orange-500 font-semibold text-xl">
+      <div className="border my-5 p-2">
+        <h2 className="text-orange-500 w-[90%] font-bold text-xl">
           Members get free shipping on orders $50+
         </h2>
-        <p className="text-[#696767] text-base font-medium w-[80%]">
-          Become a Nike Member for fasr free shipping on orders $50+
+        <p className="text-[#696767] text-base font-normal w-[85%]">
+          Become a Nike Member for fast free shipping on orders $50+
           <Link className="underline">Join us</Link> or
           <Link className="underline"> Sign in</Link>
         </p>
@@ -40,15 +44,15 @@ const CartContent = () => {
       </div>
 
       <div className="font-medium">
-        <h1 className="text-2xl">Summary</h1>
+        <h1 className="text-2xl mb-3">Summary</h1>
 
         <div className="flex flex-col gap-2">
           <div className="font-base">
             <div className="flex items-center gap-2">
               <p>Do you have a Promo Code?</p>
-              <FaChevronDown />
+              {isVisible ? <FaChevronDown onClick={() => setIsVisible(false)} /> : <FaChevronUp onClick={() => setIsVisible(true)} />}
             </div>
-            <div className="flex items-center mt-4 gap-3">
+            <div className={isVisible ? "hidden" : "flex items-center my-3 gap-3 ease-in-out duration-100"}>
               <input
                 type="text"
                 className="border w-full rounded-md border-[#c0c0c0]"
@@ -59,7 +63,7 @@ const CartContent = () => {
 
           <div className="flex justify-between items-center">
             <p className="flex items-center gap-[3px]">Subtotal
-            <FaQuestionCircle />
+            <FaQuestionCircle className="text-[15px]" />
             </p>
             <p>Free</p>
           </div>
@@ -72,7 +76,7 @@ const CartContent = () => {
           <div className="flex justify-between items-center">
             <p className="flex items-center gap-[3px]">
               Estimated Tax
-              <FaQuestionCircle />
+              <FaQuestionCircle className="text-[15px]" />
             </p>
               <p>-</p>
           </div>
@@ -84,10 +88,10 @@ const CartContent = () => {
 
         </div>
 
-        <div className="mt-7">
-          <h1 className="font-bold text-xl">Favorites</h1>
-         <p className="w-[90%] text-[22px]">Want to view your favorites?
-          <Joinus title="Join us" to="/signup" /> or
+        <div className="mt-12">
+          <h1 className="font-semibold text-2xl">Favorites</h1>
+         <p className="w-[90%] text-[17px]">Want to view your favorites?
+          <Joinus title="Join us" to="/signup" /> or 
           <Joinus title="Sign-in" to="/signup" />
          </p>
         </div>

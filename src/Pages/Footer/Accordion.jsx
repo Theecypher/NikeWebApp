@@ -13,7 +13,7 @@ const Accordion = () => {
       </div> */}
       {/* {isActive && <div className="flex">{content}</div>} */}
       {Content.map((item, index) => (
-        <div className='py-7 flex justify-between'>
+        <div key={index} className='py-7 flex justify-between'>
         <h1>{item.name}</h1>
         <FaPlus className='' />
         </div>
