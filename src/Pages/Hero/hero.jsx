@@ -15,7 +15,7 @@ const Hero = () => {
         </header>
 
         <section className="mt-2">
-          <Link to="/">
+          <Link to="/shop">
             <img className="w-full" src={shoes1} alt="" />
           </Link>
 
