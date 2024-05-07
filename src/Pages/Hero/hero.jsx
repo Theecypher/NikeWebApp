@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import Button from "../../Components/Button";
 import Navbar from "../Navbar";
 import shoes from "./Assets/big-shoe2.png";
 import shoes1 from "./Assets/shoot.jpeg";
 import { SiNike } from "react-icons/si";
+import Header from "../../Components/header";
 
 const Hero = () => {
   return (
@@ -13,11 +15,11 @@ const Hero = () => {
         </header>
 
         <section className="mt-2">
-          {/* <div className="bg-black border h-full px-7 pt-[200px]"> */}
-            {/* <img className="rotate-[90deg] w-[300px]" src={shoes1} alt="" /> */}
+          <Link to="/">
             <img className="w-full" src={shoes1} alt="" />
+          </Link>
 
-            {/* <div className="my-8 pb-4 mx-auto flex flex-col items-center">
+          {/* <div className="my-8 pb-4 mx-auto flex flex-col items-center">
               <SiNike className="text-white text-[50px] py-2" />
               <div className="flex gap-1">
                 <div className="w-[10px] h-[10px] bg-white rounded-full"></div>
@@ -37,15 +39,16 @@ const Hero = () => {
 
           <div className="mx-2 my-2">
             {/* <h2 className="font-bold text-center">Nike Air Mx Dn</h2> */}
-            <h1 className="text-5xl font-bold my-[2px] text-center">MOM GOES THE DISTANCE</h1>
+            <h1 className="text-5xl font-bold my-[2px] text-center">
+              MOM GOES THE DISTANCE
+            </h1>
             <p className="text-[17px] font-[400] my-7 text-center">
               The next generation of Air technology launches on March 12th.
               Preview the full lineup of colorways now.
             </p>
 
             <div className="flex justify-center gap-2">
-                <Button text="Shop" blackButton="true" />
-  
+              <Button text="Shop" blackButton="true" />
             </div>
           </div>
         </section>

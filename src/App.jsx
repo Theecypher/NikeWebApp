@@ -10,13 +10,15 @@ import LandingPage from "./Pages/landingPage";
 import UserAuth from "./Onboarding/userAuth";
 import Search from "./Components/Search/Search";
 import Carts from "./Components/Carts/Carts";
+import Shop from "./Pages/Shop/Shop";
 
 function App() {
   return (
     <div className="overflow-hidden">
       {/* <Signup /> */}
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<Shop />} />
+        <Route path="/page" element={<LandingPage />} />
         <Route path="/signup" element={<UserAuth />} />
         <Route path="/search" element={<Search />} />
         <Route path="/carts" element={<Carts />} />
