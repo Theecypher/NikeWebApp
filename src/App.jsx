@@ -17,8 +17,8 @@ function App() {
     <div className="overflow-hidden">
       {/* <Signup /> */}
       <Routes>
-        <Route path="/" element={<Shop />} />
-        <Route path="/page" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/shop" element={<Shop />} />
         <Route path="/signup" element={<UserAuth />} />
         <Route path="/search" element={<Search />} />
         <Route path="/carts" element={<Carts />} />
