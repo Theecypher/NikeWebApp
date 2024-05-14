@@ -1,5 +1,6 @@
 import Footer from "../../Pages/Footer/Footer";
 import Navbar from "../../Pages/Navbar";
+import Scroll from "../MightLike/Might";
 import MightLike from "../MightLike/MightLink";
 import SearchIcon from "../Search/SearchIcon";
 import CartContent from "./CartContent";
@@ -13,7 +14,8 @@ const Carts = () => {
 
       <CartContent />
       <CheckoutButton />
-      <MightLike />
+      {/* <MightLike /> */}
+      <Scroll />
       <Footer />
     </div>
   );

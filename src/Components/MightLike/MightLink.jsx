@@ -3,6 +3,15 @@ import { MightLikeData } from "./MightData";
 import { RxChevronLeft, RxChevronRight } from "react-icons/rx";
 
 const MightLike = () => {
+  const slideLeft = () => {
+    var slider = document.getElementById('slider');
+    slider.scrollLeft = slider.scrollLeft - 500;
+  };
+
+  const slideRight = () => {
+    var slider = document.getElementById('slider');
+    slider.scrollLeft = slider.scrollLeft + 500;
+  };
   const [buttonState, setButtoneState] = useState({
     activeObject: null,
     objects: [
