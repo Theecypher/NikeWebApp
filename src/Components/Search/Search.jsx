@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { TrendingShoes } from "../../Pages/Spotlight/spotlightData";
 import SearchIcon from "./SearchIcon";
+import PueSearch from "./PueSearch";
 
 const Search = () => {
   return (
@@ -21,6 +22,8 @@ const Search = () => {
           </ul>
         ))}
       </div>
+
+      {/* <PueSearch /> */}
     </div>
   );
 };

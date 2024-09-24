@@ -10,14 +10,14 @@ import { SidebarIcons } from "../Data/sidebarData";
 
 const Sidebar = ({setOpenSide, openSide }) => {
   return (
-    <aside className={openSide ?  "absolute w-[90%] z-50 top-0 right-0 ease-in duration-500 pt-2 md:hidden bg-gray-200" :
-    "absolute top-0 right-[-300px] ease-in duration-500 pt-2 w-[95%] md:hidden bg-gray-200"
+    <aside className={openSide ?  "absolute w-[90%] z-50 top-0 right-0 duration-300 pt-2 md:hidden bg-gray-200" :
+    "absolute top-0 right-[-300px] ease-in duration-700 pt-2 w-[95%] md:hidden bg-gray-200"
   }
    >
       <section className="flex gap-6 flex-col px-8">
         <IoMdClose className="self-end text-xl" onClick={() => setOpenSide(false)} />
 
-        <div className="flex flex-col gap-3 text-black">
+        <div className="flex border border-emerald-500 flex-col gap-3 text-black">
           {NavbarData.map((text, index) => (
             <ul key={index}>
               <li className="flex text-xl justify-between">
